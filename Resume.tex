@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Justin}{Yuan}{
+% \urlstyle{same}\url{linkedin.com/in/justin-yuan} \\
+\urlstyle{same}\url{http://github.com/Justin-Yuan} \\
+\href{justin.zcyuan@gmail.ca}{justin.zcyuan@gmail.com} | 416-834-6221
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{5mm}
+\section{Education} 
+\subsection{University of Toronto}
+\descript{BA.Sc. in Engineering Science}
+Major in Robotics Engineering \\
+\location{Sept. 2015 - May 2020}
+% SGPA: 4.00/4.00 \\
+CGPA: 3.91/4.00 \\
+
+
+% \vspace{5mm}
+% \sectionsep
+% \section{Coursework}
+% Linear Control Theory, -/4.0 GPA \\
+% Computer Vision for Robotics, -/4.0 GPA \\
+% Intro to Artificial Intelligence, 4.0/4.0 GPA\\
+% Data Structure and Analysis, 3.7/4.0 GPA\\
+% Machine Learning \& Data Mining 4.0/4.0 GPA \\
+% Probability \& Statistics, 4.0/4.0 GPA \\
+% Dynamics, 4.0/4.0 GPA \\
+% Control System, 3.7/4.0 GPA
+
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{5mm}
+\section{Skills}
+    \subsection{Programming}
+        \textbullet{} Python \\ 
+        \textbullet{} C/C++ \\
+        \textbullet{} Java \\
+        \textbullet{} Matlab \\
+    \vspace{5mm}
+    \subsection{Data Analytics}
+        \textbullet{} Numpy, Pandas \\
+        \textbullet{} Hadoop \\
+        \textbullet{} Spark \\
+    \vspace{5mm}
+    \subsection{Machine Learning}
+        \textbullet{} TensorFlow \\
+        \textbullet{} PyTorch \\
+    \vspace{5mm}
+    \subsection{Others}
+        \textbullet{} OpenCV \\
+        \textbullet{} Robot Operating System (ROS) \\
+
+\vspace{5mm}
+\section{Awards} 
+University of Toronto Scholar Award \\
+University of Toronto Dean's List  \\
+Wallberg Undergraduate Scholarship \\
+Lachlan Gilchrist Scholarship \\
+EngSci Awards of Excellence
+
+
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publication}
+\runsubsection{Meta-Sim: Learning to Generate Synthetic Datasets}
+\descript{ICCV 2019}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\begin{tightemize}
+    \item Kar, A., Prakash, A., Liu, M.Y., Cameracci, E., \textbf{Yuan, J.}, Rusiniak, M., Acuna, D., Torralba, A. and Fidler, S
+    \item Adapted Faster R-CNN \& Mask R-CNN for perception tasks on several driving scene datasets.
+    \item Developed a pipeline to interface neural network model and game engine, achieved distributed training and rendering.
+\end{tightemize}
+
+\section{Experience / Projects}
+
+\runsubsection{Nvidia}
+\descript{Deep Learning Intern | Sept 2018 - Sept 2019 }
+\location{Toronto AI Lab, Ontario}
+\begin{tightemize}
+    \item Worked on synthetic data generation, sim-to-real domain transfer/adaptation, with a special focus on self-driving perception tasks. 
+    \item Worked on neural physics engine, trajectory prediction and relational modeling, implemented and benchmarked variants of Graph Neural Networks. 
+    \item Developed a codebase for unsupervised distribution matching on videos, crafted several learning environments for physics and traffic simulation.
+\end{tightemize}
+
+\sectionsep
+\runsubsection{Apple}
+\descript{Siri Software Engineer/Research Intern | May 2018 - Sept 2018}
+\location{Seattle, Washington}
+\begin{tightemize}
+    \item Improved a user intent matching component in Siri pipeline, reduced error rate by 1.5\% over production model. 
+    \item Experimented with various ranking models using Learning-to-Rank and deep learning techniques.
+    \item Designed an experiment workflow for fast prototyping, model tuning and visualization, used by 3 team developers.  
+\end{tightemize}
+
+\sectionsep
+\runsubsection{Data-Driven Decision Making Lab (D3M)}
+\descript{Research Intern | May 2017 - Sept 2017}
+\location{Toronto, Ontario}
+\begin{tightemize}
+    \item Built image classifiers with TensorFlow and Keras on MNIST and CIFAR-10, developed visualizations on learnt features 
+    \item Applied deep learning on text classification with TED Talk scripts and Amazon Reviews, experimented and benchmarked performances over different networks including convolutional, recurrent and attentional architectures.
+    \item Designed a hierarchical span-based attention network, increased explainability and classification accuracy by 1-2\%.  
+\end{tightemize}
+
+\sectionsep
+\runsubsection{Ant Financial Artificial Intelligence Competition}
+\descript{Team Developer | Jun 2018 - July 2018}
+% \location{North America Region}
+\begin{tightemize}
+    \item Designed and implemented a neural classifier on semantic similarity for Chinese sentence pairs, experimented with various word embeddings and sentence embeddings, achieved a final accuracy of 85\%.
+\end{tightemize}
+
+
+
+\section{Activities}
+
+\sectionsep
+\runsubsection{Machine Intelligence Student Team}
+\descript{Cofounder/VP Marketing/VP Academics | Nov 2016 – Jun 2019}
+% \location{Python, Electromech}
+\begin{tightemize}
+    \item Built a machine learning community for undergrad students, developed 6 workshops on deep learning fundamentals
+\end{tightemize}
+\sectionsep
+
+\sectionsep
+\runsubsection{IEEE, University of Toronto Student Branch}
+\descript{Event Director/Conference and Hackathon Director | May 2016 – Feb 2019}
+% \location{Python, Electromech}
+\begin{tightemize}
+    \item Organized the 2017 and 2019 “Hello Con!” Programming Conference with over 100 participants
+    \item Hosted the 2016 IEEEXtreme Programming Competition U of T branch with 4 competing teams
+
+\end{tightemize}
+\sectionsep
+
+
+\sectionsep
+\end{minipage} 
+\end{document}
